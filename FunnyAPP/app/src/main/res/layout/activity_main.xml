@@ -7,74 +7,59 @@
     android:background="#0297EB"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/but_Airelibre"
-        android:layout_width="163dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="513dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Al aire libre"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/but_encasa"
-        android:layout_width="163dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="124dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="En casa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_Airelibre" />
+        <TextView
+            android:id="@+id/text_Bienvenida"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="8dp"
+            android:text="Escoge tu opción:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <Button
-        android:id="@+id/but_juegos"
-        android:layout_width="163dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="299dp"
-        android:backgroundTint="#FFFBFB"
-        android:text="Juegos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_encasa" />
+        <Button
+            android:id="@+id/but_Airelibre"
+            android:layout_width="163dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="51dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Al aire libre" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="411dp"
-        android:layout_height="228dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_juegos"
-        app:srcCompat="@drawable/funny" />
+        <Button
+            android:id="@+id/but_encasa"
+            android:layout_width="163dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="51dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="En casa" />
 
-    <TextView
-        android:id="@+id/text_Bienvenida"
-        android:layout_width="345dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="40dp"
-        android:text="Escoge tu opción:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/but_Airelibre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/but_juegos"
+            android:layout_width="163dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#FFFBFB"
+            android:text="Juegos" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="411dp"
+            android:layout_height="328dp"
+            app:srcCompat="@drawable/funny" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

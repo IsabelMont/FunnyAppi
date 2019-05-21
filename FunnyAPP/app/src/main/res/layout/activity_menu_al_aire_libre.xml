@@ -31,5 +31,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_logo"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ImagenAlairelibre" />
+        app:srcCompat="@drawable/imagenalairelibre" />
 </android.support.constraint.ConstraintLayout>

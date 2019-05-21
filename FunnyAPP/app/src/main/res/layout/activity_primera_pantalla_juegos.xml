@@ -9,64 +9,59 @@
     android:backgroundTint="#2196F3"
     tools:context=".PrimeraPantallaJuegos">
 
-    <ImageView
-        android:id="@+id/image_logo"
-        android:layout_width="126dp"
-        android:layout_height="76dp"
-        android:layout_marginEnd="285dp"
-        android:layout_marginBottom="653dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/funny"
-        tools:srcCompat="@drawable/funny" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="692dp">
 
-    <Button
-        android:id="@+id/but_JuegoAzar"
-        android:layout_width="334dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="121dp"
-        android:backgroundTint="#FAF8F8"
-        android:text="Juego al azar"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/but_JuegoAzar"
+            android:layout_width="334dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="121dp"
+            android:backgroundTint="#FAF8F8"
+            android:text="Juego al azar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="334dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="192dp"
-        android:backgroundTint="#F3ECEC"
-        android:foregroundTint="#FAFAFA"
-        android:text="Elegir juego"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="334dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="192dp"
+            android:backgroundTint="#F3ECEC"
+            android:foregroundTint="#FAFAFA"
+            android:text="Elegir juego"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/image_menuFotos"
-        android:layout_width="281dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="653dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menujuegos" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_menuFotos"
+            android:layout_width="281dp"
+            android:layout_height="76dp"
+            android:layout_marginBottom="653dp"
+            app:srcCompat="@drawable/menujuegos" />
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="126dp"
+            android:layout_height="76dp"
+            android:layout_marginEnd="285dp"
+            android:layout_marginBottom="653dp"
+            app:srcCompat="@drawable/funny"
+            tools:srcCompat="@drawable/funny" />
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
