@@ -10,6 +10,7 @@
     tools:context=".PrimeraPantallaJuegos">
 
     <LinearLayout
+        android:id="@+id/cont_botppj"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -42,6 +43,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/cont_imagppj"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">

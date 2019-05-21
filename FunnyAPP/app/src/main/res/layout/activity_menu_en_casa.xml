@@ -9,46 +9,54 @@
     android:backgroundTint="#2196F3"
     tools:context=".MenuEnCasa">
 
-    <ImageView
-        android:id="@+id/image_logo2"
-        android:layout_width="126dp"
-        android:layout_height="76dp"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toStartOf="@+id/image_encasa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/funny"
-        tools:srcCompat="@drawable/funny" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/image_encasa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/image_logo2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/encasa" />
+        <ImageView
+            android:id="@+id/image_logo2"
+            android:layout_width="126dp"
+            android:layout_height="76dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/funny"
+            tools:srcCompat="@drawable/funny" />
 
-    <Button
-        android:id="@+id/but_AlAzar"
-        android:layout_width="254dp"
-        android:layout_height="103dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:text="Al azar"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="213dp" />
+        <ImageView
+            android:id="@+id/image_encasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/encasa" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/but_listaencasa"
-        android:layout_width="255dp"
-        android:layout_height="108dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Elige"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="401dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/but_AlAzar"
+            android:layout_width="254dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginBottom="168dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="Al azar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+        <Button
+            android:id="@+id/but_listaencasa"
+            android:layout_width="255dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginBottom="139dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Elige"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
