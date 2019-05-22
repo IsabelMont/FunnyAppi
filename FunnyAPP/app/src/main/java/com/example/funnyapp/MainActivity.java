@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         //Salto de ventana a la de aire libre
         but_Airelibre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+
+        /*
+        // NO BORRAR, ES UNA VENTANA EN LA QUE SALE EL MAPA (CON LA MARCA EN VITORIA-GASTEIZ)
+        //Salto de ventana a la de aire libre
+        but_Airelibre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MapsActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+        */
+
 
         // Salto de ventana a la de Menu en casa
         but_encasa.setOnClickListener(new View.OnClickListener() {
