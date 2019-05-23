@@ -16,6 +16,9 @@ import com.google.android.gms.maps.SupportMapFragment;
  * Use the {@link FirstMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+/* NO HACER CASO A ESTA CLASE, ES UNA PRUEBA */
+
 public class FirstMapFragment extends SupportMapFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

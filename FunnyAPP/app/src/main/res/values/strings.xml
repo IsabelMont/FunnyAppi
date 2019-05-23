@@ -2,6 +2,6 @@
     <string name="app_name">Funnyapp</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_key" translatable="false">AIzaSyBcsX1X9DqtJDcYAqDxd2-eSDPcVV8JdjQ</string>
     <string name="title_activity_maps">Map</string>
 </resources>
