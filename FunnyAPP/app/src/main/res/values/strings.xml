@@ -4,4 +4,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="map_key" translatable="false">AIzaSyBcsX1X9DqtJDcYAqDxd2-eSDPcVV8JdjQ</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tabladejuegos">activity_tabladejuegos</string>
 </resources>
