@@ -1,6 +1,8 @@
 package com.example.funnyapp;
 
-public class Juego {
+import java.io.Serializable;
+
+public class Juego implements Serializable {
 
     public Juego(String nombre) {
         this.nombre = nombre;
