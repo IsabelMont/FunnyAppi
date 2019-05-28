@@ -1,31 +1,52 @@
 package com.example.funnyapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
-public class UbicacionActual extends FragmentActivity implements OnMapReadyCallback {
+import java.io.IOException;
+import java.util.List;
 
+public class UbicacionActual extends FragmentActivity implements OnMapReadyCallback,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
+
+
+    GoogleMap map;
+    GoogleApiClient client;
+    LocationRequest locationRequest;
     Location ubicacionActual;
+    Marker currentLocationMarker;
     FusedLocationProviderClient fusedLocationProviderClient;
-    private static final int REQUEST_CODE = 101;
+    public static final int REQUEST_CODE = 101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +55,7 @@ public class UbicacionActual extends FragmentActivity implements OnMapReadyCallb
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
+
     }
 
     private void fetchLastLocation() {
@@ -51,7 +73,7 @@ public class UbicacionActual extends FragmentActivity implements OnMapReadyCallb
                     Toast.makeText(getApplicationContext(),ubicacionActual.getLatitude()
                             +""+ubicacionActual.getLongitude(),Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment = (SupportMapFragment)
-                            getSupportFragmentManager().findFragmentById(R.id.google_map);
+                            getSupportFragmentManager().findFragmentById(R.id.map);
                     supportMapFragment.getMapAsync(UbicacionActual.this);
                 }
             }
@@ -60,6 +82,7 @@ public class UbicacionActual extends FragmentActivity implements OnMapReadyCallb
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
 
         LatLng latLng = new LatLng(ubicacionActual.getLatitude(), ubicacionActual.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions().position(latLng)
@@ -78,5 +101,80 @@ public class UbicacionActual extends FragmentActivity implements OnMapReadyCallb
                 }
                 break;
         }
+    }
+
+   public void onClick(View v)
+   {
+
+        if(v.getId() == R.id.B_search)
+        {
+
+            EditText tf_location = (EditText)findViewById(R.id.TF_location);
+            String location = tf_location.getText().toString();
+            List<Address> addressList = null;
+            MarkerOptions mo = new MarkerOptions();
+
+            if( !location.equals(("")))
+            {
+                Geocoder geocoder = new Geocoder(this);
+                try {
+                    addressList = geocoder.getFromLocationName(location,5);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                for (int i = 0; i<addressList.size();i++)
+                {
+                    Address myAddress = addressList.get(i);
+                    LatLng latlng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
+                    mo.position(latlng);
+                    mo.title("Tu lugar ideal :)");
+                    map.addMarker(mo);
+                    map.animateCamera(CameraUpdateFactory.newLatLng(latlng));
+                }
+            }
+        }
+
+   }
+
+   public void onTerminar (View v) {
+        Intent intent = new Intent(v.getContext(), Compartir.class);
+        startActivityForResult(intent,0);
+
+   }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 }

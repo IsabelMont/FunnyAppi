@@ -10,6 +10,13 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true"/>
+        <uses-permission
+            android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+            android:maxSdkVersion="18"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -50,6 +57,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".UbicacionActual" />
+        <activity android:name=".ListadoJuegosAireLibre"/>
+        <activity android:name=".DetalleJuegoAireLibre" />
+        <activity android:name=".Compartir"/>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+
+        </provider>
+
+        <activity android:name=".DisplayImage"/>
+
     </application>
 
 </manifest>

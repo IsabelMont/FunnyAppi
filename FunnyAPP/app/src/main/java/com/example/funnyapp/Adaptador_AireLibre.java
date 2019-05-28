@@ -9,13 +9,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Adaptador extends BaseAdapter {
+public class Adaptador_AireLibre extends BaseAdapter {
 
-    private Context context;
+
+    private Context contexto;
     private ArrayList<Juego> listItem;
 
-    public Adaptador(Context context, ArrayList<Juego> listItem) {
-        this.context = context;
+
+    public Adaptador_AireLibre(Context contexto, ArrayList<Juego> listItem) {
+        this.contexto = contexto;
         this.listItem = listItem;
     }
 
@@ -35,11 +37,12 @@ public class Adaptador extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int i, View convertView, ViewGroup parent) {
 
-        Juego juego = (Juego) getItem(position);
-        LayoutInflater.from(context).inflate(R.layout.activity_pantalla__lista_juegos, null);
+        Juego juego = (Juego) getItem(i);
+        LayoutInflater.from(contexto).inflate(R.layout.activity_juegosalairelibre, null);
         ListView listView = (ListView) convertView.findViewById(R.id.listView2);
         return convertView;
     }
+
 }

@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class pantalla_ListaJuegos extends AppCompatActivity {
 
@@ -29,7 +28,7 @@ public class pantalla_ListaJuegos extends AppCompatActivity {
         final ListView lista;
         final ArrayAdapter<String> adaptador;
 
-        lista = (ListView) findViewById(R.id.listView);
+        lista = (ListView) findViewById(R.id.listView2);
 
         arrayjuego = getNombreItem(GetArrayItems());
         arrayItem = GetArrayItems();

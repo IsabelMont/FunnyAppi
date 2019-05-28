@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /*
         //Salto de ventana a la de aire libre
         but_Airelibre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+        */
+
+        /*
+        but_Airelibre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ListadoJuegosAireLibre.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+        */
 
 
         /*
@@ -51,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
         */
 
-        /*
+
         // VENTANA QUE MUESTRA LA UBICACIÓN ACTUAL EN LA QUE ESTAMOS
         // ESTA VENTANA FUNCIONA
         but_Airelibre.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-        */
+
 
 
         // Salto de ventana a la de Menu en casa
