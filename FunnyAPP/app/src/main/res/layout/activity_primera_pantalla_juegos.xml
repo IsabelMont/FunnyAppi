@@ -10,60 +10,63 @@
     tools:context=".PrimeraPantallaJuegos">
 
     <LinearLayout
-        android:id="@+id/cont_botppj"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="692dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/but_JuegoAzar"
-            android:layout_width="334dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="250dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="121dp"
-            android:backgroundTint="#FAF8F8"
-            android:text="Juego al azar"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="334dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="37dp"
-            android:layout_marginBottom="192dp"
-            android:backgroundTint="#F3ECEC"
-            android:foregroundTint="#FAFAFA"
-            android:text="Elegir juego"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cont_imagppj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:id="@+id/cont_imagppj"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/image_menuFotos"
+                android:layout_width="281dp"
+                android:layout_height="76dp"
+                app:srcCompat="@drawable/menujuegos" />
 
-        <ImageView
-            android:id="@+id/image_menuFotos"
-            android:layout_width="281dp"
-            android:layout_height="76dp"
-            android:layout_marginBottom="653dp"
-            app:srcCompat="@drawable/menujuegos" />
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/funny"
+                tools:srcCompat="@drawable/funny" />
 
-        <ImageView
-            android:id="@+id/image_logo"
-            android:layout_width="126dp"
-            android:layout_height="76dp"
-            android:layout_marginEnd="285dp"
-            android:layout_marginBottom="653dp"
-            app:srcCompat="@drawable/funny"
-            tools:srcCompat="@drawable/funny" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/cont_botppj"
+            android:layout_width="match_parent"
+            android:layout_height="490dp"
+            android:gravity="center|center_vertical|end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/but_JuegoAzar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FAF8F8"
+                android:text="Juego al azar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/but_eligeJuego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="192dp"
+                android:backgroundTint="#F3ECEC"
+                android:foregroundTint="#FAFAFA"
+                android:text="Elegir juego"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textSize="24sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
