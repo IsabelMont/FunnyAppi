@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".peliculas"></activity>
+        <activity android:name=".DetalleRecetas"></activity>
+        <activity android:name=".lista_recetas" />
+        <activity android:name=".peliculas" />
         <activity android:name=".lista_EnCasa" />
         <activity android:name=".DetalleJuego" />
         <activity android:name=".pantalla_ListaJuegos" />

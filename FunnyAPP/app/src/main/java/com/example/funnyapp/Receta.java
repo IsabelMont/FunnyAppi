@@ -1,11 +1,12 @@
 package com.example.funnyapp;
 
-public class Receta {
+import java.io.Serializable;
 
+public class Receta implements Serializable{
     // Atributos
-    private String titulo;
-    private String ingredientes;
-    private String procedimiento;
+    public String titulo;
+    public String ingredientes;
+    public String procedimiento;
 
     //Constructor
     public Receta(String titulo, String ingredientes, String procedimiento) {
