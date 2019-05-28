@@ -42,8 +42,8 @@
 
             <Button
                 android:id="@+id/but_AlAzar"
-                android:layout_width="254dp"
-                android:layout_height="103dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="#FFFFFF"
                 android:backgroundTint="#FFFFFF"
@@ -52,8 +52,8 @@
 
             <Button
                 android:id="@+id/but_listaencasa"
-                android:layout_width="255dp"
-                android:layout_height="108dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#FFFFFF"
