@@ -42,5 +42,12 @@ public class lista_EnCasa extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+        but_recetas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), lista_recetas.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 }
